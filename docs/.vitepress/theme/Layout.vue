@@ -11,8 +11,8 @@
 <script>
 import Nav from './../../components/Nav.vue';
 import 'bootstrap/dist/css/bootstrap.rtl.css';
-import 'bootstrap/js/src/base-component.js';
-import 'bootstrap/js/src/collapse.js';
+import 'bootstrap/js/dist/base-component.js';
+import 'bootstrap/js/dist/collapse.js';
 export default {
   components: {
     Nav
