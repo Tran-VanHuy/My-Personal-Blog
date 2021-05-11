@@ -1,17 +1,19 @@
 <template>
   <Nav :tabs='tabs'/>
-  <section class="container py-3">
+  <transition name="slide-fade" v-on:after-leave="trn_end" v-on:before-enter="trn_do">
+  <section class="container py-3" v-bind:key="$page.title">
   <div v-if="$frontmatter.home">
     <h1>This is index page!</h1>
   </div>
     <Content></Content>
   </section>
+  </transition>
 </template>
 
 <script>
 import Nav from './../../components/Nav.vue';
 import 'bootstrap/dist/css/bootstrap.rtl.css';
-import 'bootstrap/js/dist/base-component.js';
+import '../fonts/fonts.css';
 import 'bootstrap/js/dist/collapse.js';
 export default {
   components: {
@@ -19,19 +21,35 @@ export default {
   },
   data() {
     return {
-      tabs:[{title: "Home", link: "/"},
-            {title: "Test", link: "/post/start"},
-            {title: "Subjects", link: "/post/start"}
-            ]
+    tabs:[{title: "الرئيسية", link: "/"},
+          {title: "تجربة", link: "/post/start"},
+          {title: "المواضيع", link: "/post/subject"}
+          ]
     }
-  },
-  methods(){
-    go: ()=>{console.log($site)}
+  }, 
+  methods() {
+    return {
+      trn_do: function(){
+        document.body.style.overflow = "hidden";
+      }, 
+      trn_end: function(){
+        this.$nextTick(function () {
+          document.body.style.overflow = "auto";
+        })
+      }
+    }
   }
 }
 </script>
 <style>
-* {
-  direction: rtl;
+body, #app{
+  min-height: 100vh;
+  background-color: #191919;
+}
+p, span {
+  color: #ffffff
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #ffffff
 }
 </style>
