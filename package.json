@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "",
+    "test": "node fix_bootstrapBuild\\test.js",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "node .//fix_bootstrapBuild//test.js && vitepress build docs",
+    "docs:build": "npm run test && vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
   "keywords": [],
