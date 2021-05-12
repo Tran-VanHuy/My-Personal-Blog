@@ -23,7 +23,7 @@ export default {
     return {
     tabs:[{title: "الرئيسية", link: "/"},
           {title: "تجربة", link: "/post/start"},
-          {title: "المواضيع", link: "/post/subject"}
+          {title: "المواضيع", link: "/post/.."}
           ]
     }
   }, 
