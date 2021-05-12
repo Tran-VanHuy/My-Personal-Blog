@@ -6,7 +6,7 @@
   "scripts": {
     "test": "",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "node .\\fix_bootstrapBuild\\test.js && vitepress build docs",
+    "docs:build": "node .//fix_bootstrapBuild//test.js && vitepress build docs",
     "docs:serve": "vitepress serve docs"
   },
   "keywords": [],
