@@ -1,10 +1,12 @@
-let fs = require('fs')
+let fs = require('fs');
+let path = require('path');
 
-fs.unlink('./node_modules/bootstrap/js/dist/collapse.js',(err) => {
+fs.unlink(path.join(__dirname,'../node_modules/bootstrap/js/dist/collapse.js'),(err) => {
     if (err) throw err;
     //console.log('successfully deleted /tmp/hello');
-    fs.copyFile('./fix_bootstrapBuild/collapse.js', './node_modules/bootstrap/js/dist/collapse.js', (err) => {
-        /*if (err) throw err;
-        console.log('Rename complete!');*/
-      });
+    fs.copyFile(path.join(__dirname, '/collapse.js'), path.join(__dirname, '../node_modules/bootstrap/js/dist/collapse.js'), (err) => {
+        if (err) throw err;
+        //console.log('Rename complete!');
+     });
   });
+//console.log(__dirname);
