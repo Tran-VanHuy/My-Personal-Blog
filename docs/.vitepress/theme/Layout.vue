@@ -14,7 +14,7 @@
 import Nav from './../../components/Nav.vue';
 import 'bootstrap/dist/css/bootstrap.rtl.css';
 import '../fonts/fonts.css';
-import '../../../fix_bootstrapBuild/collapse.js';
+import 'bootstrap/js/dist/collapse.js';
 export default {
   components: {
     Nav

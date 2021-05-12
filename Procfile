@@ -1,1 +1,0 @@
-web: node fix_bootstrapBuild\test.js
