@@ -9,7 +9,7 @@
       <ul class="navbar-nav mb-2 mb-lg-0">
         <li class="nav-item" v-for="tab in tabs" :key="tab" >
                 <a class="nav-link" v-text="tab.title"
-                 :class="{active: '/' + $page.relativePath.replace(/\..*?$|index\..*?$/, '') == tab.link}" 
+                 :class="{active: $page.relativePath == tab.link}" 
                  :href="tab.link"></a>
         </li>
       </ul>

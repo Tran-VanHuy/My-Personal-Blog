@@ -14,16 +14,16 @@
 import Nav from './../../components/Nav.vue';
 import 'bootstrap/dist/css/bootstrap.rtl.css';
 import '../fonts/fonts.css';
-import 'bootstrap/js/dist/collapse.js';
+import '../../../fix_bootstrapBuild/collapse.js';
 export default {
   components: {
     Nav
   },
   data() {
     return {
-    tabs:[{title: "الرئيسية", link: "/"},
-          {title: "تجربة", link: "/post/start"},
-          {title: "المواضيع", link: "/post/.."}
+    tabs:[{title: "الرئيسية", link: "index.html"},
+          {title: "تجربة", link: "post/start"},
+          {title: "المواضيع", link: "post/.."}
           ]
     }
   }, 
